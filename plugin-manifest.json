@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "name": "linkanalysis",
+  "version": "0.1.0",
+  "description": "Link Analysis — entity relationship mapping and network graph analysis. Connects people, organizations, vessels ($AIS), aircraft ($ADB), domains ($NET), social accounts ($SOC), satellites ($OEM). Identifies ownership chains, shell companies, sanctions violations, and hidden connections.",
+  "author": "DigitalArsenal",
+  "license": "Apache-2.0",
+  "inputFormats": ["application/json"],
+  "outputFormats": ["$LNK"]
+}
