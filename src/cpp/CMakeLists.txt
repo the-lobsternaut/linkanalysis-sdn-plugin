@@ -2,8 +2,13 @@ cmake_minimum_required(VERSION 3.14)
 project(linkanalysis_sdn_plugin CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_library(linkanalysis_lib STATIC src/linkanalysis.cpp)
+target_include_directories(linkanalysis_lib PUBLIC include)
+
 add_executable(test_linkanalysis tests/test_linkanalysis.cpp)
-target_include_directories(test_linkanalysis PRIVATE include)
+target_link_libraries(test_linkanalysis linkanalysis_lib)
+
 add_executable(test_sixdof tests/test_sixdof.cpp)
 target_include_directories(test_sixdof PRIVATE include)
 enable_testing()
